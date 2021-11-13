@@ -139,12 +139,93 @@ class IconTextDownloadWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              "aboba",
+            Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: baseConfig.localeStr("download.id") + ":\n",
+                  ),
+                  TextSpan(
+                    text: info.id,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
+              ),
               style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 14 * q.textScaleFactor),
-              maxLines: 50,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 24 * q.textScaleFactor),
+              maxLines: 5,
+              softWrap: true,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: q.size.height / 128),
+            Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: baseConfig.localeStr("download.size") + ":\n",
+                  ),
+                  TextSpan(
+                    text: (info.size / 1000 / 1000).toStringAsFixed(1) + "MB",
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
+              ),
+              style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 24 * q.textScaleFactor),
+              maxLines: 5,
+              softWrap: true,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: q.size.height / 128),
+            Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: baseConfig.localeStr("download.version") + ":\n",
+                  ),
+                  TextSpan(
+                    text: info.version,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
+              ),
+              style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 24 * q.textScaleFactor),
+              maxLines: 5,
+              softWrap: true,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: q.size.height / 128),
+            Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: baseConfig.localeStr("download.date") + ":\n",
+                  ),
+                  TextSpan(
+                    text: dateTimeToString(info.releaseDate),
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
+              ),
+              style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 24 * q.textScaleFactor),
+              maxLines: 5,
               softWrap: true,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,

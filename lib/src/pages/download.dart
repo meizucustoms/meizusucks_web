@@ -81,7 +81,7 @@ class _DownloadPageState extends State<DownloadPage> {
                   child: Text(
                     baseConfig.localeStr("download.notes"),
                     style: TextStyle(
-                      fontSize: (24 * q.textScaleFactor) / smallDeviceRadio,
+                      fontSize: (24 * q.textScaleFactor),
                       fontWeight: FontWeight.w600,
                     ),
                     maxLines: 2,
@@ -95,7 +95,7 @@ class _DownloadPageState extends State<DownloadPage> {
                     baseConfig.main!
                         .getReleaseNotes(baseConfig.main!.latest.id),
                     style: TextStyle(
-                      fontSize: (18 * q.textScaleFactor) / smallDeviceRadio,
+                      fontSize: (18 * q.textScaleFactor),
                       fontWeight: FontWeight.w400,
                     ),
                     maxLines: 20,
