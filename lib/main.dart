@@ -11,7 +11,7 @@ import 'package:meizusucks_web/src/pages/report.dart';
 import 'package:meizusucks_web/src/pages/root.dart';
 
 void main() {
-  setUrlStrategy(PathUrlStrategy());
+  setUrlStrategy(const HashUrlStrategy());
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
     MaterialApp(
