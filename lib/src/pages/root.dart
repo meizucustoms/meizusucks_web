@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:meizusucks_web/src/pages/bugs.dart';
+import 'package:meizusucks_web/src/pages/donaters.dart';
 import 'package:meizusucks_web/src/pages/download.dart';
+import 'package:meizusucks_web/src/pages/notes.dart';
 import 'package:meizusucks_web/src/widgets/appbar.dart';
 import 'package:meizusucks_web/src/common/config.dart';
 import 'package:meizusucks_web/src/common/common.dart';
@@ -234,7 +236,7 @@ class _MainPageState extends State<MainPage> {
                   onPressed: () {
                     Navigator.pushNamed(
                       context,
-                      const BugsListPage().getRoute(),
+                      const DonatersPage().getRoute(),
                     );
                   },
                   text: baseConfig.localeStr("main.links.donate"),
@@ -265,7 +267,7 @@ class _MainPageState extends State<MainPage> {
                   onPressed: () {
                     Navigator.pushNamed(
                       context,
-                      const BugsListPage().getRoute(),
+                      const NotesPage().getRoute(),
                     );
                   },
                   width: q.size.width < 700
